@@ -68,12 +68,37 @@ Portal web para la gestión autónoma de campañas:
 
 ---
 
-### 6. PILLARES DE DISEÑO
+### 6. INFRAESTRUCTURA ECONÓMICA — SOLANA ES EL CORE
+
+GoldHunter **es** un proyecto Web3. Solana no es una opción técnica — es el pilar económico que hace posible el modelo de incentivos. No existe arquitectura alternativa.
+
+| Componente | Tecnología | Por qué es no-negociable |
+|-----------|-----------|--------------------------|
+| **Fragmentos culturales** | cNFTs (Compressed NFTs) en Solana | Costo por mint < $0.001 — escala a millones de usuarios sin destruir el modelo de negocio |
+| **Vouchers de canje** | NFTs de canje generados on-chain | Prueba criptográfica inmutable del logro — no falsificable, auditable por las marcas |
+| **Smart Contracts** | Anchor Framework + Rust | `mint_fragment` y `redeem_fragment` — lógica de economía de recompensas on-chain |
+| **Red** | Solana Devnet → Mainnet | 65,000 TPS, finalidad en 400ms — la única L1 que soporta interacciones en tiempo real desde mobile |
+
+**Flujo económico on-chain:**
+```
+Usuario en POI → Guardian valida → mint_fragment() → cNFT en wallet
+Álbum completo → NFT voucher generado → redeem_fragment() → marca verifica → premio físico
+```
+
+**Por qué Solana y no otras chains:**
+- Ethereum/Polygon: gas fees hacen inviable mintear fragmentos a escala masiva
+- Solana State Compression: cNFTs cuestan 1000x menos que NFTs estándar
+- Confirmación < 1 segundo: experiencia mobile fluida sin esperar confirmaciones
+
+---
+
+### 7. PILLARES DE DISEÑO
 
 1. **El Mundo Real es el Mapa** — Sin movimiento físico, no hay progreso.
 2. **El Conocimiento es la Moneda** — El Guardián es el producto, no un obstáculo.
-3. **El Logro debe ser Tangible** — Todo premio existe en el mundo real.
+3. **El Logro debe ser Tangible** — Todo premio existe en el mundo real, respaldado on-chain.
 4. **La Escasez es el Respeto** — Los cupos limitados crean urgencia genuina.
+5. **Solana es la Columna Vertebral** — Toda economía de recompensas corre on-chain. Sin Web3, no hay GoldHunter.
 
 ---
 
