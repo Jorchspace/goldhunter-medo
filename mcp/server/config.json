@@ -1,0 +1,58 @@
+{
+  "name": "goldhunter-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for GoldHunter — exposes POI, album, and guardian tools to Claude",
+  "tools": [
+    {
+      "name": "get_poi_context",
+      "description": "Fetch cultural context for a POI to feed the Guardian Cognitive challenge",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "poi_id": { "type": "string", "description": "Unique POI identifier" },
+          "language": { "type": "string", "default": "es", "description": "Response language" }
+        },
+        "required": ["poi_id"]
+      }
+    },
+    {
+      "name": "validate_presence",
+      "description": "Validate that a user is physically present at a POI location",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "user_id": { "type": "string" },
+          "poi_id": { "type": "string" },
+          "lat": { "type": "number" },
+          "lng": { "type": "number" }
+        },
+        "required": ["user_id", "poi_id", "lat", "lng"]
+      }
+    },
+    {
+      "name": "mint_fragment",
+      "description": "Trigger cNFT minting on Solana after a successful Guardian challenge",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "user_wallet": { "type": "string" },
+          "poi_id": { "type": "string" },
+          "album_id": { "type": "string" }
+        },
+        "required": ["user_wallet", "poi_id", "album_id"]
+      }
+    },
+    {
+      "name": "get_album_status",
+      "description": "Get current completion status and remaining slots for a limited edition album",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "album_id": { "type": "string" },
+          "user_id": { "type": "string" }
+        },
+        "required": ["album_id"]
+      }
+    }
+  ]
+}
