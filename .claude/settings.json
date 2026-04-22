@@ -1,0 +1,6 @@
+{
+  "enabledMcpjsonServers": ["medo"],
+  "env": {
+    "MEDO_API_KEY": ""
+  }
+}
