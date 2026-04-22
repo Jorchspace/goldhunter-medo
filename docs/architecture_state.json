@@ -1,0 +1,79 @@
+{
+  "project": "GoldHunter",
+  "version": "1.2",
+  "snapshot_date": "2026-04-21",
+  "hackathon": {
+    "name": "Build with MeDo",
+    "organizer": "Baidu + Devpost",
+    "deadline": "2026-05-20",
+    "credits_remaining": 300,
+    "credits_per_export": 80
+  },
+  "identity": {
+    "tagline": "Explore-to-Learn & Earn",
+    "type": "Web3 Native / Location-based gamification",
+    "team": "Jorch Lab"
+  },
+  "source_of_truth": {
+    "white_paper": "README.md (White Paper v1.2)",
+    "game_concept": "design/gdd/game-concept.md",
+    "smart_contracts": "anchor/programs/goldhunter/src/lib.rs"
+  },
+  "pillars": [
+    "El Mundo Real es el Mapa — sin movimiento físico, no hay progreso",
+    "El Conocimiento es la Moneda — el Guardián es el producto",
+    "El Logro debe ser Tangible — respaldado on-chain",
+    "La Escasez es el Respeto — cupos limitados crean urgencia",
+    "Solana es la Columna Vertebral — toda economía corre on-chain"
+  ],
+  "economic_core": {
+    "chain": "Solana",
+    "framework": "Anchor + Rust",
+    "token_standard": "cNFTs (Compressed NFTs via State Compression)",
+    "contracts": {
+      "mint_fragment": "Mintea cNFT al completar POI challenge",
+      "redeem_fragment": "Marca fragmento como canjeado al reclamar premio físico"
+    },
+    "why_solana": "cNFT cost < $0.001, 65k TPS, finalidad 400ms — única L1 viable para escala mobile masiva"
+  },
+  "stack": {
+    "mobile_b2c": "React Native + Expo (TypeScript)",
+    "web_b2b": "Next.js (TypeScript)",
+    "ai_guardian": "Claude API (Anthropic) — Guardián Cognitivo contextual por POI",
+    "blockchain": "Solana + Anchor/Rust",
+    "automation": "n8n + Scrapling",
+    "mcp_server": "api.medo.dev (MeDo skill — conectado vía .mcp.json)",
+    "ui": "Shadcn/UI + Magic UI",
+    "security": "Tailscale + Docker en VPS distribuidos",
+    "ai_generator": "MeDo (Baidu) — generación de código vía créditos"
+  },
+  "repo": {
+    "url": "https://github.com/Jorchspace/goldhunter-medo",
+    "branch": "master",
+    "structure": {
+      "app": "React Native + Expo (B2C)",
+      "web": "Next.js Business Hub (B2B)",
+      "anchor": "Solana smart contracts",
+      "n8n": "Workflow automation",
+      "mcp": "MCP server config",
+      "docs": "Architecture snapshots"
+    }
+  },
+  "scope_tiers": {
+    "mvp": "1 ciudad, 2 rutas, 15-20 POIs, 1 álbum, 1 patrocinador — 8-10 semanas",
+    "vertical_slice": "3 rutas, cNFTs reales, Business Hub — 16-20 semanas",
+    "alpha": "2 ciudades, avatares, skins, airdrops — 5-7 meses",
+    "full_vision": "Multi-ciudad, marketplace completo — 12-18 meses"
+  },
+  "visual_identity": {
+    "anchor": "Cartografía Viva",
+    "rule": "El mapa es una capa sobre la realidad, no un universo paralelo",
+    "palette": "Tierra + Oro + Digital — el oro aparece SOLO al ganar"
+  },
+  "next_session_priorities": [
+    "Usar MeDo para generar pantalla principal del mapa (Export 1)",
+    "Implementar Guardian Cognitivo con Claude API en app/",
+    "Configurar Solana Devnet y probar mint_fragment con wallet de prueba",
+    "Inicializar proyecto Next.js en web/ para Business Hub"
+  ]
+}
